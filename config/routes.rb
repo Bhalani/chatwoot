@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   }, via: [:get, :post]
 
   root to: 'dashboard#index'
-
+  get '/chathome', to: 'general#index'
   get '/app', to: 'dashboard#index'
   get '/app/*params', to: 'dashboard#index'
   get '/app/accounts/:account_id/settings/inboxes/new/twitter', to: 'dashboard#index', as: 'app_new_twitter_inbox'
